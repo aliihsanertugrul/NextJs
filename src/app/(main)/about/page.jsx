@@ -1,6 +1,7 @@
 import React from 'react'
 
-const AboutPage = () => {
+const AboutPage = ({params}) => {
+  throw new Error("test")
   return (
     <div>AboutPage</div>
   )
