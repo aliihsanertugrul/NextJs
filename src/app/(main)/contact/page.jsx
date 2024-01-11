@@ -1,11 +1,12 @@
-import { wait } from '@/utils/misc';
-import React from 'react'
+import React from "react";
 
-const ContactPage = async () => {
-  await wait(5000);
-  return (
-    <div>ContactPage</div>
-  )
-}
+const ContactPage = () => {
+	return (
+		<div>
+			ContactPage
+			
+		</div>
+	);
+};
 
-export default ContactPage
+export default ContactPage;

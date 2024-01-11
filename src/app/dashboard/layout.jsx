@@ -1,18 +1,16 @@
-import DashboardHeader from "@/components/common/dashboard/header";
-
+import DashboardHeader from "@/components/dashboard/header";
 import React from "react";
 import { Container } from "react-bootstrap";
 
-const DashboardLayout = ({ children }) => {
-  return (
-    <>
-      <DashboardHeader/>
-      <Container className="flex-grow-1">
-        {children}
-      </Container>
-      
-    </>
-  );
+const DashboarLayout = ({ children }) => {
+	return (
+		<>
+			<DashboardHeader/>
+            <Container className="flex-grow-1">
+			{children}
+            </Container>
+		</>
+	);
 };
 
-export default DashboardLayout;
+export default DashboarLayout;

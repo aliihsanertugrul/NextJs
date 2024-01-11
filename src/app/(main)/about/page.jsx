@@ -1,10 +1,10 @@
 import React from 'react'
 
-const AboutPage = ({params}) => {
-  throw new Error("test")
+const AboutDetail = ({params}) => {
+    console.log(params)
   return (
-    <div>AboutPage</div>
+    <div>AboutDetail</div>
   )
 }
 
-export default AboutPage
+export default AboutDetail

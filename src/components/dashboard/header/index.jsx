@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link";
 import React from "react";
-
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 
 const DashboardHeader = () => {
@@ -22,7 +21,6 @@ const DashboardHeader = () => {
 					</Offcanvas.Header>
 					<Offcanvas.Body>
 						<Nav className="justify-content-end flex-grow-1 pe-3">
-                        
 							<Nav.Link href="/dashboard" as={Link}>
 								Dashboard
 							</Nav.Link>
@@ -32,7 +30,7 @@ const DashboardHeader = () => {
 							<Nav.Link href="/dashboard/profile" as={Link}>
 								Profile
 							</Nav.Link>
-                            <Nav.Link href="/" as={Link}>
+              <Nav.Link href="/" as={Link}>
 								Home
 							</Nav.Link>
 							<Nav.Link>Signout</Nav.Link>
