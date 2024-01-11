@@ -1,10 +1,24 @@
-import React from 'react'
+import PageHeader from "@/components/common/page-header";
+import Image from "next/image";
+import React from "react";
 
-const AboutDetail = ({params}) => {
-    console.log(params)
-  return (
-    <div>AboutDetail</div>
-  )
-}
+const AboutPage = ({ params }) => {
+	//throw new Error("test")
+	return (
+		<div>
+			<PageHeader title="About"/>
+			<Image
+				src="https://loremflickr.com/800/400"
+				width={800}
+				height={400}
+        alt="loremflickr"
+			/>
 
-export default AboutDetail
+			<div className="bg-primary">Hello</div>
+
+
+		</div>
+	);
+};
+
+export default AboutPage;

@@ -1,11 +1,13 @@
+import PageHeader from '@/components/common/page-header'
 import React from 'react'
 
-const ProductDetails = ({params}) => {
-
+const ProductDetailsPage = ({params}) => {
 
   return (
-    <div>ProductDetails: {params.id}</div>
+    <div>
+      <PageHeader title="ABC"/>
+      ProductDetails: {params.id}</div>
   )
 }
 
-export default ProductDetails
+export default ProductDetailsPage
