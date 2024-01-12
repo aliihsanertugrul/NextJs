@@ -1,6 +1,10 @@
 import PageHeader from "@/components/common/page-header";
 import Image from "next/image";
 import React from "react";
+export const metadata = {
+	title: "About",
+	description: "Luxury furniture for your comfort",
+};
 
 const AboutPage = ({ params }) => {
 	//throw new Error("test")
