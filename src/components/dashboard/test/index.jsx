@@ -1,11 +1,22 @@
+"use client"
 import React from "react";
 import styles from "./index.module.scss";
 const Test = () => {
-	return <div className={styles.testComp}>
-        
-        <a href="#">TEST LINK</a>
 
-    </div>;
-};
+    const handleClick = () => {
+        alert("Hello")
+    }
+
+	return(
+        <div className={styles.testComp}>
+        
+       <button onClick={handleClick}>Click Me</button>
+
+    </div>
+
+    )
+}
+    
+     
 
 export default Test;

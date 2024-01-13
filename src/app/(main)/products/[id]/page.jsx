@@ -1,20 +1,37 @@
-import PageHeader from '@/components/common/page-header'
-import React from 'react'
-export const metadata = {
-	title: {
-    absolute:"Free Title"
-  },
-	description: "Luxury furniture for your comfort",
+import PageHeader from "@/components/common/page-header";
+import Spacer from "@/components/common/spacer";
+import ProductDetails from "@/components/products/product-details";
+import { config } from "@/utils/config";
+import React from "react";
+
+export const generateMetadata = async ({ params }) => {
+  const productId = params.id;
+  if (!productId || isNaN(productId)) throw new Error("Product is invalid!");
+
+  const res = await fetch(`${config.apiURL}/products/${productId}`);
+  const product = await res.json();
+
+  return {
+    title:product.title,
+    description:product.description,
+  };
 };
 
+const ProductDetailsPage = async ({ params }) => {
+  const productId = params.id;
+  if (!productId || isNaN(productId)) throw new Error("Product is invalid!");
 
-const ProductDetailsPage = ({params}) => {
+  const res = await fetch(`${config.apiURL}/products/${productId}`);
+  const product = await res.json();
 
   return (
     <div>
-      <PageHeader title="ABC"/>
-      ProductDetails: {params.id}</div>
-  )
-}
+      <PageHeader title={product.title} />
+      <Spacer />
+      <ProductDetails product={product} />
+      <Spacer />
+    </div>
+  );
+};
 
-export default ProductDetailsPage
+export default ProductDetailsPage;

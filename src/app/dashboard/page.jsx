@@ -1,4 +1,6 @@
 import Test from '@/components/dashboard/test'
+import ClientComp from '@/components/dashboard/test/client-comp';
+import ServerComp from '@/components/dashboard/test/server-comp';
 import React from 'react'
 export const metadata = {
 	title: "Dashboard",
@@ -14,6 +16,8 @@ const DashboardPage = () => {
       <a href="#" className="nav-link active">Test link</a>
 
       <Test/>
+      
+      <ClientComp/>
     </div>
   )
 }
