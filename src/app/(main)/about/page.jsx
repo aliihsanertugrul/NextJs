@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const AboutPage = ({ params }) => {
-	//throw new Error("test")
+	// throw new Error("test")
 	return (
 		<div>
 			<PageHeader title="About"/>

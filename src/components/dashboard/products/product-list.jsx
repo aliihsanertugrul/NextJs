@@ -1,6 +1,7 @@
-import ProductItem from "@/components/products/product-item";
+
 import React from "react";
 import { Button, Table } from "react-bootstrap";
+import ProductRow from "./product-row";
 
 const ProductList = ({ products }) => {
   const { id, title, price, image, category } = products;
@@ -16,15 +17,10 @@ const ProductList = ({ products }) => {
       </thead>
       <tbody>
         {products.map((item,index) => (
-          <tr key={item.id}>
-            <td>{index+1}</td>
-            <td>{item.title}</td>
-            <td>{item.category}</td>
-            <td>${item.price}</td>
-          </tr>
+          <ProductRow key={item.id} {...item} seq={index+1}/>
         ))}
       </tbody>
-      <Button className="mt-3">Delete</Button>
+      
     </Table>
   );
 };
