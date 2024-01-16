@@ -1,12 +1,14 @@
 "use client";
+import { createProductAction } from "@/actions/product-actions";
 import CancelButton from "@/components/common/form-controls/cancel-button";
 import SubmitButton from "@/components/common/form-controls/submit-button";
 import React from "react";
 import { Form } from "react-bootstrap";
+import "../../../actions/product-actions.js"
 
 const NewProductForm = () => {
 	return (
-		<Form>
+		<Form action={createProductAction}>
 			<Form.Group className="mb-3">
 				<Form.Label>Title</Form.Label>
 				<Form.Control name="title" type="text" />

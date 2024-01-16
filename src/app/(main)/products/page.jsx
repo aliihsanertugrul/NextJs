@@ -3,6 +3,11 @@ import Spacer from '@/components/common/spacer';
 import ProductList from '@/components/products/product-list';
 import { config } from '@/utils/config';
 import React from 'react'
+
+// export const revalidate=60;
+//burada 60sn sonra data yenilenip gelir.
+export const dynamic="force-dynamic";
+
 export const metadata = {
 	title: "Products",
 	description: "Luxury furniture for your comfort",
