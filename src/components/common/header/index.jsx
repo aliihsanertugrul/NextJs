@@ -4,8 +4,12 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import menuItems from "./menu.json";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 
 const Header = () => {
+	const{data:session}=useSession();//mainlayoutu sarmalladık,client oldugu için bunu kullandık.
+	console.log(session)
+
 	return (
 		<Navbar expand="lg" bg="dark" data-bs-theme="dark" collapseOnSelect>
 			<Container>
@@ -22,8 +26,14 @@ const Header = () => {
 						))}
 					</Nav>
 				</Navbar.Collapse>
+				
+				{session?.user ? (
+                    <Link href="/dashboard">Dashboard</Link>
+                ) : (
+                    <Link href="/api/auth/signin">Login</Link>
+                )}
 
-                <Link href="/dashboard">Dashboard</Link>
+                
 			</Container>
 		</Navbar>
 	);
